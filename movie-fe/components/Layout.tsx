@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 import Head from 'next/head'
+import Header from "./Header";
 
 type PropType = {
     children: ReactNode;
@@ -13,9 +14,7 @@ export default function Layout({ children }: PropType) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="w-full h-8 border-solid border-2 bg-red-400">
-            Tomatoes Header
-        </div>
+        <Header />
         <main className="w-screen h-screen p-20 flex flex-wrap gap-2">
             {children}
         </main >
