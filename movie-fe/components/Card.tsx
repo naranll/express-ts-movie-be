@@ -1,24 +1,37 @@
 import { MovieType } from "@/utils/Types";
 
+export default function Card({
+  poster,
+  title,
+  tomatoes,
+}: MovieType): JSX.Element {
+  // function clickHandler(): void {
+  //     console.log("id", movie._id);
+  //     axios.post("http://localhost:7100/", { id: movie._id })
+  //         .then((res) => console.log(res.data));
+  // }
 
-export default function Card({ poster, title, tomatoes }: MovieType): JSX.Element {
+  // function limitWords(sentence: string) {
+  //     const totalWords: number = sentence.split(' ').length();
+  //     return totalWords > 6 ? sentence.split(' ').slice(0, 6).join(' ') : sentence;
+  // }
 
-    // function clickHandler(): void {
-    //     console.log("id", movie._id);
-    //     axios.post("http://localhost:7100/", { id: movie._id })
-    //         .then((res) => console.log(res.data));
-    // }
-
-    return <div className="w-48 h-84 border-solid border-2 border-black" >
-        <picture>
-            <img src={poster} alt={title} />
-        </picture>
+  return (
+    <div className="w-44 h-80 border-solid border-2 rounded-[10px] md:max-w-[320px] md:max-h-[600px]">
+      <picture>
+        <img
+          src={poster}
+          alt={title}
+          className="w-full h-5/6 md:h-5/6 rounded-[10px]"
+        />
+      </picture>
+      <div className="p-1 text-sm">
         <h6>{tomatoes.viewer.rating}</h6>
-        <h4>{title}</h4>
+        <h4>{title.split(" ").slice(0, 6).join(" ")}</h4>
+      </div>
     </div>
+  );
 }
-
-
 
 /* METHOD 1*/
 // type MovieType = {
@@ -36,7 +49,6 @@ export default function Card({ poster, title, tomatoes }: MovieType): JSX.Elemen
 //         <h6>Year: {year}</h6>
 //     </div>
 // }
-
 
 // return <div className="w-48 h-84 border-solid border-2 border-black bg-[#121212] text-white" onClick={clickHandler}>
 //     //     {/* <Image src={movie.poster} alt={movie.title} width= /> */}
