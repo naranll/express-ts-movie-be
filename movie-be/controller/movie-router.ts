@@ -14,7 +14,6 @@ movieRouter.get("/movies", async (req: Request, res: Response) => {
 
 movieRouter.get("/btns", async (req: Request, res: Response) => {
     console.log(req.query);
-
 })
 
 movieRouter.get("/movie/:id", async (req: Request, res: Response) => {
