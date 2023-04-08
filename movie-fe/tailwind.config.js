@@ -8,6 +8,12 @@ export const content = [
   "./src/**/*.{js,ts,jsx,tsx}",
 ];
 export const theme = {
+  colors: {
+    red: "#fa320a",
+    black: "#000",
+    white: "#fff",
+    gray:"#d3d3d3"
+  },
   extend: {},
 };
 export const plugins = [];

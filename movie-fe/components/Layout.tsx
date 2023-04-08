@@ -16,7 +16,7 @@ export default function Layout({ children }: PropType) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="w-screen h-screen p-20 flex flex-wrap gap-2">
+      <main className="container mx-auto h-screen flex flex-wrap gap-2">
         {children}
       </main>
     </>

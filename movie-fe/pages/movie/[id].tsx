@@ -36,6 +36,9 @@ export default function Movie(): JSX.Element {
   );
 }
 
+//set idType as test
+//set params obj type as test
+
 // const getStaticPaths: GetStaticPaths = async () => {
 //   const response = await fetch(`http://localhost:7100/movie-ids`);
 //   const resJson = response.json(); //["qwert", "dsfgh"]
@@ -48,7 +51,7 @@ export default function Movie(): JSX.Element {
 //   };
 // };
 
-//returns only one object
+// // returns only one object
 // const getStaticProps: GetStaticProps<MovieType> = async ({ params }) => {
 //   const response = await fetch(`http://localhost:7100/movie/${params.id}`);
 //   const movie = response.json();

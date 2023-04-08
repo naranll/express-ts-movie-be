@@ -1,6 +1,5 @@
-// import axios from "axios";
-
 import DropDown from "./DropDown";
+import SearchIcon from "@/assets/SearchIcon";
 
 export default function Header(): JSX.Element {
   function clickHandler(): void {
@@ -9,15 +8,14 @@ export default function Header(): JSX.Element {
       const newres = await res.json();
       console.log(newres);
     };
-
     filtersth();
   }
 
-  const buttonStyle = "relative hover:text-black hover:bg-white group ";
+  const buttonStyle = "static hover:text-black hover:bg-white group";
 
   return (
     <>
-      <div className="w-full h-14 border-solid border-2 bg-red-500 flex justify-between items-center text-white p-4">
+      <div className="w-full m-0 h-14 border-solid border-2 bg-red flex justify-between items-center text-white p-4">
         <picture>
           <img
             src="https://images.fandango.com/cms/assets/2d5a3340-be84-11ed-9d20-83ee649e98bd--rt25-logo-mainnav-161x50.svg"
@@ -26,8 +24,11 @@ export default function Header(): JSX.Element {
           />
         </picture>
 
-        <form>
-          <input type="search" />
+        <form className={`flex items-center gap-2 h-9 p-3 bg-black opacity-40 border-solid border-2 border-white rounded-3xl`}>
+          <span>
+            <SearchIcon/>
+          </span>
+          <input type="search" placeholder="Search movies, TV, actors, more..." className={`w-96 bg-black opacity-40`} />
         </form>
 
         <div className={buttonStyle}>
@@ -52,4 +53,3 @@ export default function Header(): JSX.Element {
     </>
   );
 }
-// className = "border-solid border-2 border-black text-white"

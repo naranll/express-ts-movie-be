@@ -11,23 +11,18 @@ export default function Card({
   //         .then((res) => console.log(res.data));
   // }
 
-  // function limitWords(sentence: string) {
-  //     const totalWords: number = sentence.split(' ').length();
-  //     return totalWords > 6 ? sentence.split(' ').slice(0, 6).join(' ') : sentence;
-  // }
-
   return (
-    <div className="w-44 h-80 border-solid border-2 rounded-[10px] md:max-w-[320px] md:max-h-[600px]">
+    <div className="w-44 h-80 border-solid border-gray border-2 rounded-[10px] md:max-w-[320px] md:max-h-[600px] drop-shadow">
       <picture>
         <img
           src={poster}
           alt={title}
-          className="w-full h-5/6 md:h-5/6 rounded-[10px]"
+          className="w-full h-3/4 rounded-[10px]"
         />
       </picture>
-      <div className="p-1 text-sm">
+      <div className="p-1 text-sm leading-tight">
         <h6>{tomatoes.viewer.rating}</h6>
-        <h4>{title.split(" ").slice(0, 6).join(" ")}</h4>
+        <h4>{title.split(" ").slice(0, 5).join(" ")}</h4>
       </div>
     </div>
   );
