@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import Filter from "@/components/Filter";
 // import { useEffect, useState } from 'react'
 // import axios from 'axios'
 import { MovieType } from "@/utils/Types";
@@ -24,13 +25,17 @@ export default function Home(props: { movies: Array<MovieType> }): JSX.Element {
   // }, []);
 
   return (
-    <>
+    <div className="flex flex-col">
+      <Filter />
+      <div className="container mx-auto h-screen flex flex-wrap gap-2">
       {movies.map((movie: MovieType, i: number) => (
         <Link href={`/movie/${movie._id}`} key={i}>
           <Card {...movie} />
         </Link>
       ))}
-    </>
+      </div>
+      
+    </div>
   );
 }
 
