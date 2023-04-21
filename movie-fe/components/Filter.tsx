@@ -1,4 +1,4 @@
-import Arrow from "./icons/Arrow";
+import Arrow from "../assets/Arrow";
 
 export default function Filter(): JSX.Element {
   const filerButtonStyle =

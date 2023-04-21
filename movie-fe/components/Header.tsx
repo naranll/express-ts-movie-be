@@ -12,6 +12,7 @@ export default function Header(): JSX.Element {
   }
 
   const buttonStyle = "static hover:text-black hover:bg-white group";
+  const searchStyle = "h-9 bg-transparent opacity-40 border-solid border-2 border-gray-500 hover:border-5 hover:border-white rounded-3xl";
 
   return (
     <>
@@ -24,11 +25,11 @@ export default function Header(): JSX.Element {
           />
         </picture>
 
-        <form className={`flex items-center gap-2 h-9 p-3 bg-black opacity-40 border-solid border-2 border-white rounded-3xl`}>
-          <span>
-            <SearchIcon/>
-          </span>
-          <input type="search" placeholder="Search movies, TV, actors, more..." className={`w-96 bg-black opacity-40`} />
+        <form className={`w-96 flex items-center gap-2 h-9 bg-black opacity-40 border-solid border-2 border-gray-500 rounded-3xl focus:border-white`}>  
+            <span className="absolute px-2">
+              <SearchIcon/>
+            </span>
+          <input type="search" placeholder="Search movies, TV, actors, more..." className={`w-96 bg-black opacity-40 pl-10 ${searchStyle}`} />
         </form>
 
         <div className={buttonStyle}>
