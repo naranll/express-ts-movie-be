@@ -25,28 +25,27 @@ export default function Home(props: { movies: Array<MovieType> }): JSX.Element {
   // }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mx-2">
       <Filter />
-      <div className="container mx-auto h-screen flex flex-wrap gap-2">
-      {movies.map((movie: MovieType, i: number) => (
-        <Link href={`/movie/${movie._id}`} key={i}>
-          <Card {...movie} />
-        </Link>
-      ))}
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-6 gap-2">
+        {movies.map((movie: MovieType, i: number) => (
+          <Link href={`/movie/${movie._id}`} key={i} >
+            <Card {...movie} />
+          </Link>
+        ))}
       </div>
-      
     </div>
   );
 }
 
 export async function getStaticProps() {
   const res = await fetch("http://localhost:7100/movies");
-    const movies = await res.json();
-    return {
-      props: {
-        movies: movies,
-      },
-    };
+  const movies = await res.json();
+  return {
+    props: {
+      movies: movies,
+    },
+  };
   // try {
   //   const res = await fetch("http://localhost:7100/movies");
   //   const movies = await res.json();
