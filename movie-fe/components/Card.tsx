@@ -12,17 +12,23 @@ export default function Card({
   // }
 
   return (
-    <div className="w-44 h-80 border-solid border-gray border-2 rounded-[10px] md:max-w-[320px] md:max-h-[600px] drop-shadow">
+    <div
+      className="w-[350px] h-[580px] max-w-full max-h-full 
+                    md:max-w-[160px] md:max-h-[300px] md:w-full 
+                    lg:w-[200px] lg:h-[300px] 
+                    border-solid border-black border-2 rounded-[10px] drop-shadow"
+    >
       <picture>
         <img
           src={poster}
           alt={title}
-          className="w-full h-3/4 rounded-[10px]"
+          className="w-[350px] h-[510px] md:max-h-[160px] lg:h-[220px] rounded-[10px] object-fit"
         />
       </picture>
+
       <div className="p-1 text-sm leading-tight">
         <h6>{tomatoes.viewer.rating}</h6>
-        <h4>{title.split(" ").slice(0, 5).join(" ")}</h4>
+        <h4>{title.split(" ").slice(0, 4).join(" ")}</h4>
       </div>
     </div>
   );
