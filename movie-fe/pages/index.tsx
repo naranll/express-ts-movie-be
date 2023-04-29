@@ -29,7 +29,7 @@ export default function Home(props: { movies: Array<MovieType> }): JSX.Element {
       <Filter />
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-6 gap-2">
         {movies.map((movie: MovieType, i: number) => (
-          <Link href={`/movie/${movie._id}`} key={i} >
+          <Link href={`/movie/${movie._id}`} key={i}>
             <Card {...movie} />
           </Link>
         ))}
