@@ -1,11 +1,31 @@
-export default function Filters(): JSX.Element {
+export default function Filter(): JSX.Element {
   return (
-    <div>
-      <div>SORT</div>
-      <div>GENRE</div>
-      <div>RATING</div>
-      <div>AUDIENCE SCORE</div>
-      <div>TOMATOMETER</div>
+    <div className="border-solid border-2 border-black">
+      <select>
+        <optgroup>
+          <option>SORT</option>
+        </optgroup>
+      </select>
+      <select>
+        <optgroup>
+          <option>GENRE</option>
+        </optgroup>
+      </select>
+      <select>
+        <optgroup>
+          <option>RATING</option>
+        </optgroup>
+      </select>
+      <select>
+        <optgroup>
+          <option>AUDIENCE SCORE</option>
+        </optgroup>
+      </select>
+      <select>
+        <optgroup>
+          <option>TOMATOMETER</option>
+        </optgroup>
+      </select>
     </div>
   );
 }
