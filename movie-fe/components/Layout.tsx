@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import {ReactNode} from "react";
 import Head from "next/head";
 import Header from "./Header";
 
@@ -6,7 +6,7 @@ type PropType = {
   children: ReactNode;
 };
 
-export default function Layout({ children }: PropType) {
+export default function Layout({children}: PropType) {
   return (
     <>
       <Head>
